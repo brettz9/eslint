@@ -53,11 +53,11 @@ of ESLint but have since been replaced by newer rules.
 | [no-obj-calls](no-obj-calls.md) | disallow the use of object properties of the global object (`Math` and `JSON`) as functions | Possible error | Invocation | | | |
 | [no-regex-spaces](no-regex-spaces.md) | disallow multiple spaces in a regular expression literal | Possible error | Regular expressions | | | |
 | [no-sparse-arrays](no-sparse-arrays.md) | disallow sparse arrays | Possible error | Arrays | | | |
-| [no-unexpected-multiline](no-unexpected-multiline.md) | Avoid code that looks like two expressions but is actually one | Possible error | | | | |
-| [no-unreachable](no-unreachable.md) | disallow unreachable statements after a return, throw, continue, or break statement | Possible error | | | | |
-| [use-isnan](use-isnan.md) | disallow comparisons with the value `NaN` | Possible error | | | | |
-| [valid-jsdoc](valid-jsdoc.md) | Ensure JSDoc comments are valid | Possible error | | | | |
-| [valid-typeof](valid-typeof.md) | Ensure that the results of typeof are compared against a valid string | Possible error | | | | |
+| [no-unexpected-multiline](no-unexpected-multiline.md) | Avoid code that looks like two expressions but is actually one | Possible error | Semi-colons | | | |
+| [no-unreachable](no-unreachable.md) | disallow unreachable statements after a return, throw, continue, or break statement | Possible error | Flow | | | |
+| [use-isnan](use-isnan.md) | disallow comparisons with the value `NaN` | Possible error | NaN | Comparisons | | |
+| [valid-jsdoc](valid-jsdoc.md) | Ensure JSDoc comments are valid | Possible error | JSDoc | Documentation | | |
+| [valid-typeof](valid-typeof.md) | Ensure that the results of typeof are compared against a valid string | Possible error | `typeof` | Comparisons | | |
 | [no-undef](no-undef.md) | disallow use of undeclared variables unless mentioned in a `/*global */` block | Possible error | Variable declaration | | | |
 | [no-shadow-restricted-names](no-shadow-restricted-names.md) | disallow shadowing of names such as `arguments` | Possible error | Variable declaration | | | |
 | [no-delete-var](no-delete-var.md) | disallow deletion of variables | Possible error | Variable declaration | | | |

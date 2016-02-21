@@ -773,43 +773,6 @@ target.checkRuleFiles = function() {
         }
 
         /**
-         * Check if rule is off in eslint conf
-         * @returns {boolean} true if off
-         * @private
-         */
-        function isOffInConfig() {
-            var rule = eslintConf[basename];
-            return rule === 0 || (rule && rule[0] === 0);
-        }
-
-        /**
-         * Check if rule is on in eslint conf
-         * @returns {boolean} true if on
-         * @private
-         */
-        function isOnInConfig() {
-            return !isOffInConfig();
-        }
-
-        /**
-         * Check if rule is not recommended by eslint
-         * @returns {boolean} true if not recommended
-         * @private
-         */
-        function isNotRecommended() {
-            return indexLine.indexOf("(recommended)") === -1;
-        }
-
-        /**
-         * Check if rule is recommended by eslint
-         * @returns {boolean} true if recommended
-         * @private
-         */
-        function isRecommended() {
-            return !isNotRecommended();
-        }
-
-        /**
          * Check if id is present in title
          * @param {string} id id to check for
          * @returns {boolean} true if present
@@ -845,7 +808,7 @@ target.checkRuleFiles = function() {
             console.error("Missing default setting for %s in eslint.json", basename);
             errors++;
         }
-
+/*
         // check that rule is not recommended in docs but off in default config
         if (isRecommended() && isOffInConfig()) {
             console.error("Rule documentation says that %s is recommended, but it is disabled in eslint.json.", basename);
@@ -857,7 +820,7 @@ target.checkRuleFiles = function() {
             console.error("Missing '(recommended)' for rule %s in index", basename);
             errors++;
         }
-
+*/
         // check for tests
         if (!test("-f", "tests/lib/rules/" + basename + ".js")) {
             console.error("Missing tests for rule %s", basename);
